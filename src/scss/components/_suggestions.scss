@@ -1,0 +1,55 @@
+#section-suggestions {
+
+
+
+  background-color: $white;
+  border-radius: 25px;
+  padding: 30px 10px 30px 10px;
+  margin: 50px;
+  & h2 {
+    padding: 0 0 12px;
+  }
+
+  & .container-suggestions {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    max-height: 200px;
+
+    & div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+
+      padding: 12px 10px 12px 0px;
+
+      & > * {
+        padding: 0 5px 0 0;
+      }
+
+      & .suggestions-icon, & .suggestions-button {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      & .suggestions-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+      }
+    }
+
+    & .suggestions-icon i{
+/*      background-color: $body-color;
+      border-radius: 4px;*/
+      color: $blue;
+    }
+  }
+}
+

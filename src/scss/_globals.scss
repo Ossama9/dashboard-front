@@ -1,0 +1,95 @@
+body {
+  font-family: $font1;
+  background-color: $body-color;
+  transition: $tran;
+}
+
+/*body {
+  @include theme-colors($light-theme: true);
+
+  body.dark {
+    @include theme-colors($light-theme: false);
+  }
+}*/
+
+
+::selection {
+  background-color: $primary-color;
+  color: $white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: $font2;
+  font-size: rem(24);
+}
+
+h2 {
+  font-family: $font2;
+  font-size: rem(16);
+}
+h3 {
+  font-family: $font2;
+  font-size: rem(14);
+}
+
+h4 {
+  font-family: $font2;
+  font-size: rem(8);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 250px;
+  height: 100vh;
+  width: calc(100% - 500px);
+  background-color: $body-color;
+  transition: $tran;
+
+
+  & .home {
+    font-size: rem(30);
+    font-weight: 400;
+    color: $text-color;
+    padding: 12px 60px;
+    width: 100%;
+  }
+}
+
+#section1 {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+#section2 {
+  display: flex;
+  justify-content: space-around;
+  background: $linear;
+  color: $white;
+  border-radius: 25px;
+  width: 85%;
+}
+
+
+#section3 {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
