@@ -94,7 +94,14 @@ h4 {
   align-content: center;
   justify-content: space-between;
   align-items: center;
-
 }
 
+#section4{
+  & h2 {
+    font-size: rem(30);
+    font-style: normal;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+  }
+}
 

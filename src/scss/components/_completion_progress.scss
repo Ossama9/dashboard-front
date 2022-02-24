@@ -21,8 +21,17 @@
       justify-content: space-between;
       height: 40px;
 
-      & .info-courses > *{
-
+      & .info-courses {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: flex-start;
+        flex-wrap: nowrap;
+        & h4{
+          color: $text-color;
+          font-weight: 500;
+        }
       }
     }
   }
