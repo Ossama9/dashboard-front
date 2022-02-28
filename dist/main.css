@@ -1,28 +1,36 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap);@charset "UTF-8";
-/*
-@mixin theme-colors($light-theme: true) {
-  @if $light-theme {
+/*@function theme-colors(){
+
     $body-color: #F0F7FF;
     $sidebar-color: #FFF;
     $primary-color: #3BCDB3;
     $toggle-color: #DDD;
     $text-color: #464646;
+  @return $body-color;
+}*/
+/*@mixin theme-colors($light-theme) {
+  @if $light-theme == true{
+    $body-color: #F0F7FF;
+    $sidebar-color: #FFF;
+    $primary-color: #3BCDB3;
+    $toggle-color: #DDD;
+    $text-color: #464646;
+
   } @else {
     $body-color: #18191a;
     $sidebar-color: #242526;
     $primary-color: #3a3b3c;
     $toggle-color: #fff;
     $text-color: #ccc;
+
   }
-}
-*/
+}*/
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #F0F7FF;
   transition: all 0.3s ease;
 }
 
-/*
 /*body {
   @include theme-colors($light-theme: true);
 
@@ -159,10 +167,13 @@ h4 {
   background-color: #f41717;
 }
 
+#section2 {
+  padding: 0 10px;
+}
 #section2 .text-banner {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 #section2 .text-banner h1 {
   display: flex;
@@ -225,13 +236,15 @@ h4 {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-evenly;
+}
+#section-suggestions h2 {
   padding: 0 0 0 20px;
 }
 #section-suggestions .container-suggestions {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: auto;
   max-height: 200px;
 }
@@ -239,7 +252,7 @@ h4 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin: 10px 5px;
+  margin: 10px 0px;
   justify-content: space-around;
 }
 #section-suggestions .container-suggestions div .suggestions-icon, #section-suggestions .container-suggestions div .suggestions-button {
@@ -574,8 +587,8 @@ h4 {
 }
 .sidebar-left header .image img {
   width: 90px;
+  height: 90px;
   border-radius: 6px;
-  background-color: #18191a;
 }
 .sidebar-left header .logo-text {
   display: flex;

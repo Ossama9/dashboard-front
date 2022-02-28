@@ -1,8 +1,9 @@
 #section2 {
+  padding: 0 10px;
   & .text-banner {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
 
     & h1 {
       display: flex;

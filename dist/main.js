@@ -4163,13 +4163,14 @@ function next(slider) {
 
 function prev(slider) {
   var attrValue = Number(slider.attr('data-currentSlide'));
-  slider.attr('data-currentSlide', attrValue - 1);
-  slide(slider);
+
+  if (Number(slider.attr('data-currentSlide')) > 0) {
+    slide(slider);
+  }
 }
 
 function slide(slider) {
   var attrValue = Number(slider.attr('data-currentSlide'));
-  console.log(attrValue);
   var leftValue = attrValue * -100;
   console.log(leftValue);
   var container = slider.children('.slides-container'); // Si on dépasse la dernière image :

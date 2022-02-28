@@ -144,13 +144,13 @@ function next(slider){
 
 function prev(slider){
     let attrValue = Number(slider.attr('data-currentSlide'));
-    slider.attr('data-currentSlide', attrValue - 1);
-    slide(slider)
+    if (Number(slider.attr('data-currentSlide')) > 0){
+        slide(slider)
+    }
 }
 
 function slide(slider){
     let attrValue = Number(slider.attr('data-currentSlide'));
-    console.log(attrValue)
     let leftValue = attrValue * -100;
     console.log(leftValue)
     let container = slider.children('.slides-container');

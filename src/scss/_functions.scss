@@ -10,21 +10,30 @@
   background-position: center
 }
 
+/*@function theme-colors(){
 
-/*
-@mixin theme-colors($light-theme: true) {
-  @if $light-theme {
     $body-color: #F0F7FF;
     $sidebar-color: #FFF;
     $primary-color: #3BCDB3;
     $toggle-color: #DDD;
     $text-color: #464646;
+  @return $body-color;
+}*/
+
+/*@mixin theme-colors($light-theme) {
+  @if $light-theme == true{
+    $body-color: #F0F7FF;
+    $sidebar-color: #FFF;
+    $primary-color: #3BCDB3;
+    $toggle-color: #DDD;
+    $text-color: #464646;
+    
   } @else {
     $body-color: #18191a;
     $sidebar-color: #242526;
     $primary-color: #3a3b3c;
     $toggle-color: #fff;
     $text-color: #ccc;
+
   }
-}
-*/
+}*/

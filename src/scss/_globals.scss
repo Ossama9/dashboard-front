@@ -2,9 +2,9 @@ body {
   font-family: $font1;
   background-color: $body-color;
   transition: $tran;
+
 }
 
-/*
 /*body {
   @include theme-colors($light-theme: true);
 
@@ -34,6 +34,7 @@ h2 {
   font-family: $font2;
   font-size: rem(16);
 }
+
 h3 {
   font-family: $font2;
   font-size: rem(14);
@@ -65,7 +66,7 @@ h4 {
     padding: 12px 60px;
     width: 100%;
 
-    & .section{
+    & .section {
       margin: 50px 0;
     }
   }
@@ -78,6 +79,7 @@ h4 {
   justify-content: space-between;
   align-items: center;
 }
+
 #section2 {
   display: flex;
   justify-content: space-around;
@@ -96,7 +98,7 @@ h4 {
   align-items: center;
 }
 
-#section4{
+#section4 {
   & h2 {
     font-size: rem(30);
     font-style: normal;
