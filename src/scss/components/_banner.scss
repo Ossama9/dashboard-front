@@ -2,7 +2,7 @@
   & .text-banner {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
 
     & h1 {
       display: flex;
@@ -21,4 +21,11 @@
       height: 162px;
     }
   }
+}
+@media (max-width: 990px) {
+
+  #section2 figure  {
+    display: none;
+  }
+
 }

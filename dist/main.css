@@ -102,7 +102,7 @@ h4 {
   background: linear-gradient(96.16deg, #2F76C0 3.98%, #3BCDB3 72.64%);
   color: #FFF;
   border-radius: 25px;
-  padding: 3%;
+  padding: 10px;
 }
 
 #section3 {
@@ -132,6 +132,9 @@ h4 {
     padding: 10%;
   }
 
+  .container {
+    padding-left: 20px;
+  }
   .container .home {
     font-size: 1.875rem;
     font-weight: 400;
@@ -181,7 +184,7 @@ h4 {
 #section2 .text-banner {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 #section2 .text-banner h1 {
   display: flex;
@@ -198,6 +201,11 @@ h4 {
   height: 162px;
 }
 
+@media (max-width: 990px) {
+  #section2 figure {
+    display: none;
+  }
+}
 #section1 div {
   border-radius: 6px;
   cursor: pointer;
@@ -255,7 +263,7 @@ h4 {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: auto;
   max-height: 200px;
 }
@@ -263,7 +271,7 @@ h4 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin: 10px 5px;
+  margin: 10px 5px 10px 0;
   justify-content: space-around;
 }
 #section-suggestions .container-suggestions div .suggestions-icon, #section-suggestions .container-suggestions div .suggestions-button {
@@ -315,66 +323,53 @@ h4 {
     border-top-right-radius: 10px;
   }
 }
-.sidebar-right {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  background: #FFF;
-  position: fixed;
-  height: 100%;
-  width: 250px;
-  top: 0;
-  right: 0;
-  padding: 20px 14px;
-  transition: all 0.3s ease;
-  z-index: 100;
-  border-top-left-radius: 10px;
-}
-.sidebar-right #part1 {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  background-color: #F0F7FF;
-  padding: 10px 0;
-  border-radius: 5px;
-}
-.sidebar-right #part1 > * {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  height: 100%;
-  justify-content: center;
-}
-.sidebar-right #part1 img {
-  height: 40px;
-  width: 40px;
-}
-.sidebar-right #part1 div a {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  flex-direction: row;
-  text-decoration: none;
-  color: #2F7DC0;
-  font-family: "Lato", sans-serif;
-  font-size: 1rem;
-}
-.sidebar-right #part1 div a svg {
-  height: 18px;
-  width: 18px;
-  padding: 0 5px 0 0px;
-}
-.sidebar-right #part1 div a svg path {
-  fill: #2F7DC0;
-}
-
 @media (max-width: 990px) {
   .sidebar-right {
-    visibility: hidden;
+    display: none;
+  }
+  .sidebar-right #part1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: #F0F7FF;
+    padding: 10px 0;
+    border-radius: 5px;
+  }
+  .sidebar-right #part1 > * {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: center;
+  }
+  .sidebar-right #part1 img {
+    height: 40px;
+    width: 40px;
+  }
+  .sidebar-right #part1 div a {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: row;
+    text-decoration: none;
+    color: #2F7DC0;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+  }
+  .sidebar-right #part1 div a svg {
+    height: 18px;
+    width: 18px;
+    padding: 0 5px 0 0px;
+  }
+  .sidebar-right #part1 div a svg path {
+    fill: #2F7DC0;
+  }
+}
+@media (min-width: 991px) {
+  .sidebar-right {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -689,7 +684,6 @@ h4 {
 .sidebar-left header .image img {
   width: 90px;
   border-radius: 6px;
-  background-color: #18191a;
 }
 .sidebar-left header .logo-text {
   display: flex;
@@ -865,8 +859,8 @@ body.dark .switch::before {
   flex-wrap: nowrap;
 }
 #section-watchlist .slider {
-  width: 1200px;
-  height: 300px;
+  width: 840px;
+  height: 200px;
   overflow: hidden;
   position: relative;
 }
@@ -877,8 +871,8 @@ body.dark .switch::before {
   left: 0;
 }
 #section-watchlist .slider .slide {
-  width: 400px;
-  height: 300px;
+  width: 280px;
+  height: 200px;
   padding: 10px;
   -o-object-fit: cover;
      object-fit: cover;

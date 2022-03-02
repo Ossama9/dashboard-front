@@ -4163,15 +4163,16 @@ function next(slider) {
 
 function prev(slider) {
   var attrValue = Number(slider.attr('data-currentSlide'));
-  slider.attr('data-currentSlide', attrValue - 1);
-  slide(slider);
+
+  if (attrValue > 0) {
+    slider.attr('data-currentSlide', attrValue - 1);
+    slide(slider);
+  }
 }
 
 function slide(slider) {
   var attrValue = Number(slider.attr('data-currentSlide'));
-  console.log(attrValue);
   var leftValue = attrValue * -100;
-  console.log(leftValue);
   var container = slider.children('.slides-container'); // Si on dépasse la dernière image :
   //	- cloner la premiere image et mettre le clone à la fin du container
   // 	- ecouter la fin de la transition css :
