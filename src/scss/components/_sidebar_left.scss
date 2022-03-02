@@ -19,18 +19,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
-      & .name {
-        margin-top: 2px;
-        font-size: rem(18);
-        font-weight: 600;
-      }
-
-      & .profession {
-        font-size: rem(16);;
-        margin-top: -2px;
-        display: block;
-      }
     }
 
     & .image {
