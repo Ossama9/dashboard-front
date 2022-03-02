@@ -90,7 +90,6 @@ h4 {
 }
 
 #section1 {
-  display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
@@ -103,7 +102,7 @@ h4 {
   background: linear-gradient(96.16deg, #2F76C0 3.98%, #3BCDB3 72.64%);
   color: #FFF;
   border-radius: 25px;
-  width: 85%;
+  padding: 3%;
 }
 
 #section3 {
@@ -112,6 +111,7 @@ h4 {
   align-content: center;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #section4 h2 {
@@ -121,6 +121,25 @@ h4 {
   margin: 0 0 20px 0;
 }
 
+@media (max-width: 990px) {
+  #section2 {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(96.16deg, #2F76C0 3.98%, #3BCDB3 72.64%);
+    color: #FFF;
+    border-radius: 25px;
+    flex-direction: column;
+    padding: 10%;
+  }
+
+  .container .home {
+    font-size: 1.875rem;
+    font-weight: 400;
+    color: #464646;
+    padding: 0px;
+    width: 100%;
+  }
+}
 .button {
   font-size: 1rem;
   text-decoration: none;
@@ -185,7 +204,6 @@ h4 {
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  width: 80%;
   background-color: #FFF;
   height: 50px;
   padding-left: 10px;
@@ -213,9 +231,15 @@ h4 {
 #section-charte {
   box-sizing: initial;
   height: 300px;
-  width: 400px;
 }
 
+@media (max-width: 990px) {
+  #section-charte {
+    box-sizing: initial;
+    height: 300px;
+    width: 500px;
+  }
+}
 #section-suggestions {
   height: 300px;
   width: 400px;
@@ -260,6 +284,37 @@ h4 {
   color: #2F7DC0;
 }
 
+@media (max-width: 990px) {
+  #section-suggestions {
+    margin-top: 20%;
+    height: 300px;
+    margin-top: 30%;
+    width: 500px;
+    background-color: #FFF;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    /* padding: 0 0 0 20px; */
+  }
+
+  .sidebar-left {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 500px;
+    padding: 10px 14px;
+    background: #FFF;
+    transition: all 0.3s ease;
+    z-index: 100;
+    border-top-right-radius: 10px;
+  }
+}
 .sidebar-right {
   display: flex;
   flex-direction: column;
@@ -317,6 +372,65 @@ h4 {
   fill: #2F7DC0;
 }
 
+@media (max-width: 990px) {
+  .sidebar-right {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background: #FFF;
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    top: 0;
+    right: 0;
+    padding: 20px 14px;
+    transition: all 0.3s ease;
+    z-index: 100;
+    border-top-left-radius: 10px;
+  }
+  .sidebar-right #part1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: #F0F7FF;
+    padding: 10px 0;
+    border-radius: 5px;
+  }
+  .sidebar-right #part1 > * {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: center;
+  }
+  .sidebar-right #part1 img {
+    height: 40px;
+    width: 40px;
+  }
+  .sidebar-right #part1 div a {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: row;
+    text-decoration: none;
+    color: #2F7DC0;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+  }
+  .sidebar-right #part1 div a svg {
+    height: 18px;
+    width: 18px;
+    padding: 0 5px 0 0px;
+  }
+  .sidebar-right #part1 div a svg path {
+    fill: #2F7DC0;
+  }
+}
 #part2 {
   display: flex;
   flex-direction: column;

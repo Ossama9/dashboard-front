@@ -51,3 +51,38 @@
   }
 }
 
+
+$breakpoint-tablet: 768px;
+@media (max-width: 990px) {
+
+#section-suggestions {
+  margin-top: 20%;
+  height: 300px;
+  margin-top: 30%;
+  width: 500px;
+  background-color: #FFF;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  /* padding: 0 0 0 20px; */
+}
+
+.sidebar-left {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 500px;
+  padding: 10px 14px;
+  background: #FFF;
+  transition: all 0.3s ease;
+  z-index: 100;
+  border-top-right-radius: 10px;
+}
+
+}
